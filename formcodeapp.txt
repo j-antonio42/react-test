@@ -1,0 +1,41 @@
+import React, { useState }from 'react'
+import './App.scss';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import DataTable from './components/semaforo/table';
+
+const App = () => {
+  const [user, setUser] = useState({name: 'toni', email: 'toni@gmail.com'}) // 
+  const [data, setData] = useState([])
+
+
+  function changeUser(event){ 
+    const value = event.target.value
+    const property = event.target.name
+    setUser({...user, [property]:value})
+  }
+
+  function saveData(event){
+    setData([...data, user])
+  }
+
+
+  return(
+    <> 
+    <Form className= 'd-flex justify-content-center'>
+      <FormGroup>
+        <Label for="name">name</Label>
+        <Input type="text" name="name" onChange={changeUser}/>
+      </FormGroup>
+      <FormGroup>
+        <Label for="email">correo</Label>
+        <Input type="text" name="email" onChange={changeUser}/>
+      </FormGroup>
+      <Button className= 'mt-4' type='button' onClick={saveData}>Guardar</Button>
+     </Form>
+     <DataTable data={data}/>
+    </>
+  )
+}
+
+
+export default App;

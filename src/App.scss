@@ -1,0 +1,38 @@
+
+ .container{
+   height: 200px;
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: gray;
+ }
+
+ .traffic{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   border: 1px solid rgb(83, 45, 221);
+
+ }
+
+ button{
+   height: 30px;
+   padding: 3px;
+   width: 100px;
+   border-radius: 3px;
+   background-color: rgb(87, 87, 231);
+   color: white;
+ }
+
+ .red{
+   background-color: red;
+ }
+
+ .green{
+   background-color: green;
+ }
+
+ .yellow{
+   background-color: yellow;
+ }
